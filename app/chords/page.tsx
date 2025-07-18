@@ -4,7 +4,8 @@ import Header from '../../components/Header';
 import { useState } from 'react';
 
 export default function Chords() {
-  const [selectedCategory, setSelectedCategory] = useState('Basic');
+  type ChordCategory = keyof typeof chords;
+const [selectedCategory, setSelectedCategory] = useState<ChordCategory>('Basic');
   const [selectedChord, setSelectedChord] = useState(null);
 
   const chordCategories = ['Basic', 'Barre', 'Seventh', 'Minor', 'Advanced'];
