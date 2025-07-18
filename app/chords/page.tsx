@@ -1,4 +1,3 @@
-
 'use client';
 
 import Header from '../../components/Header';
@@ -10,7 +9,14 @@ export default function Chords() {
 
   const chordCategories = ['Basic', 'Barre', 'Seventh', 'Minor', 'Advanced'];
 
-  const chords = {
+  const chords: {
+    [key: string]: {
+      name: string;
+      fullName: string;
+      difficulty: string;
+      fingers: string;
+    }[];
+  } = {
     Basic: [
       { name: 'G', fullName: 'G Major', difficulty: 'Easy', fingers: '3-2-0-0-3-3' },
       { name: 'C', fullName: 'C Major', difficulty: 'Easy', fingers: '0-1-0-2-3-0' },
@@ -52,6 +58,7 @@ export default function Chords() {
       { name: 'Dm7', fullName: 'D Minor 7th', difficulty: 'Easy', fingers: 'x-x-0-2-1-1' }
     ]
   };
+
 
 const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
