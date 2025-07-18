@@ -53,7 +53,7 @@ export default function Chords() {
     ]
   };
 
-  const getDifficultyColor = (difficulty) => {
+const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
       case 'Easy': return 'text-green-600 bg-green-100';
       case 'Medium': return 'text-yellow-600 bg-yellow-100';
